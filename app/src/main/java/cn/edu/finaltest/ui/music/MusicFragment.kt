@@ -1,4 +1,4 @@
-package cn.edu.finaltest.ui.notifications
+package cn.edu.finaltest.ui.music
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import cn.edu.finaltest.R
 
-class NotificationsFragment : Fragment() {
+class MusicFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
+    private lateinit var musicViewModel: MusicViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
-        val textView: TextView = root.findViewById(R.id.text_notifications)
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
+        musicViewModel =
+                ViewModelProviders.of(this).get(MusicViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_music, container, false)
+        val textView: TextView = root.findViewById(R.id.text_music)
+        musicViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
