@@ -1,6 +1,7 @@
 package cn.edu.finaltest
 
 import android.os.Bundle
+import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -23,4 +24,10 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
+    fun onPrev(view: View) {}
+    fun onPlay(view: View) {}
+    fun onPause(view: View) {}
+    fun onStop(view: View) {}
+    fun onNext(view: View) {}
 }
