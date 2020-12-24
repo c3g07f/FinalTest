@@ -1,9 +1,9 @@
 package cn.edu.finaltest.ui.weather
-import android.annotation.SuppressLint
-import android.app.AppComponentFactory
+
+
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
-import androidx.appcompat.app.AppCompatActivity
 import cn.edu.finaltest.R
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
@@ -13,9 +13,11 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.weatherui.*
 
-class WeatherActivity: AppCompatActivity() {
+
+class WeatherActivity : AppCompatActivity() {
+
     val baseURL = "http://t.weather.itboy.net/api/weather/city/"
-    @SuppressLint("SetTextI18n")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.weatherui)
@@ -23,7 +25,7 @@ class WeatherActivity: AppCompatActivity() {
         val queue = Volley.newRequestQueue(this)
         val stringRequest = StringRequest(baseURL+cityCode,{
             val gson = Gson()
-            val WeatherType = object : TypeToken<Weather>() {}.type
+            val WeatherType = object :TypeToken<Weather>() {}.type
             val weather = gson.fromJson<Weather>(it,WeatherType)
             textView_city.text = weather.cityInfo.city
             textView_province.text = weather.cityInfo.parent
@@ -37,7 +39,7 @@ class WeatherActivity: AppCompatActivity() {
                 "阵雨" -> imageView.setImageResource(R.drawable.rain)
                 else -> imageView.setImageResource(R.drawable.thunder)
             }
-            val adapter = ArrayAdapter<Forecast>(this, android.R.layout.simple_list_item_1,weather.data.forecast)
+            val adapter = ArrayAdapter<Forecast>(this,android.R.layout.simple_list_item_1,weather.data.forecast)
             listView.adapter = adapter
 
 

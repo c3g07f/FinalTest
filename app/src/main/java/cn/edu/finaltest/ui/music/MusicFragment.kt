@@ -1,36 +1,36 @@
-//package cn.edu.finaltest.ui.music
-//
-//import android.Manifest
-//import android.app.Notification
-//import android.app.NotificationChannel
-//import android.app.NotificationManager
-//import android.app.PendingIntent
-//import android.content.Context
-//import android.content.Intent
-//import android.content.pm.PackageManager
-//import android.media.MediaPlayer
-//import android.os.Build
-//import android.os.Bundle
-//import android.provider.MediaStore
-//import android.view.LayoutInflater
-//import android.view.View
-//import android.view.ViewGroup
-//import android.widget.SeekBar
-//import android.widget.TextView
-//import androidx.core.app.ActivityCompat
-//import androidx.core.content.ContextCompat
-//import androidx.core.content.ContextCompat.getSystemService
-//import androidx.fragment.app.Fragment
-//import androidx.lifecycle.Observer
-//import androidx.lifecycle.ViewModelProviders
-//import cn.edu.finaltest.MainActivity
-//import cn.edu.finaltest.R
-//import kotlinx.android.synthetic.main.fragment_music.*
-//import java.io.IOException
-//import kotlin.concurrent.thread
-//
-//class MusicFragment : Fragment() {
-//
+package cn.edu.finaltest.ui.music
+
+import android.Manifest
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.media.MediaPlayer
+import android.os.Build
+import android.os.Bundle
+import android.provider.MediaStore
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.SeekBar
+import android.widget.TextView
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getSystemService
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import cn.edu.finaltest.MainActivity
+import cn.edu.finaltest.R
+import kotlinx.android.synthetic.main.fragment_music.*
+import java.io.IOException
+import kotlin.concurrent.thread
+
+class MusicFragment : Fragment() {
+
 //    private lateinit var musicViewModel: MusicViewModel
 //    val mediaPlayer = MediaPlayer()
 //    val musicList = mutableListOf<String>()
@@ -199,6 +199,6 @@
 //        super.onDestroy()
 //        mediaPlayer.release()
 //    }
-//}
-//
-//
+}
+
+

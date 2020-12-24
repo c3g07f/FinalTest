@@ -22,4 +22,9 @@
         android:name="cn.edu.finaltest.ui.weather.WeatherFragment"
         android:label="@string/title_weather"
         tools:layout="@layout/fragment_weather" />
+    <fragment
+        android:id="@+id/navigation_watch"
+        android:name="cn.edu.finaltest.ui.watch.WatchFragment"
+        android:label="@string/title_watch"
+        tools:layout="@layout/watch_fragment" />
 </navigation>
