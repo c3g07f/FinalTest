@@ -30,7 +30,7 @@ class WeatherActivity : AppCompatActivity() {
             textView_city.text = weather.cityInfo.city
             textView_province.text = weather.cityInfo.parent
             textView_shidu.text = "湿度："+weather.data.shidu
-            textView_wendu.text = "温度"+weather.data.wendu
+            textView_wendu.text = "温度："+weather.data.wendu+"℃"
             val firstDay = weather.data.forecast.first()
             when(firstDay.type){
                 "晴" -> imageView.setImageResource(R.drawable.sun)

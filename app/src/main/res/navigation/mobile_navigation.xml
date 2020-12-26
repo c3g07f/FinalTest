@@ -27,4 +27,9 @@
         android:name="cn.edu.finaltest.ui.watch.WatchFragment"
         android:label="@string/title_watch"
         tools:layout="@layout/watch_fragment" />
+    <fragment
+        android:id="@+id/navigation_game"
+        android:name="cn.edu.finaltest.ui.game.GameFragment"
+        android:label="@string/title_game"
+        tools:layout="@layout/game_fragment" />
 </navigation>

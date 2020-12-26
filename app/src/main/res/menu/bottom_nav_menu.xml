@@ -5,7 +5,6 @@
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/title_home" />
-
     <item
         android:id="@+id/navigation_music"
         android:icon="@drawable/ic_baseline_music_video_24"
@@ -19,5 +18,9 @@
         android:id="@+id/navigation_watch"
         android:icon="@drawable/ic_baseline_watch_later_24"
         android:title="@string/title_watch" />
+    <item
+        android:id="@+id/navigation_game"
+        android:icon="@drawable/ic_baseline_games_24"
+        android:title="@string/title_game" />
 
 </menu>
