@@ -8,21 +8,21 @@ import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import cn.edu.finaltest.R
 
-class CardAdapter(val game: CardMatchingGame): RecyclerView.Adapter<CardAdapter.ViewHolder>() {
-    class ViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView) {
-        val cardButton:Button
+class CardAdapter(val game:CardMatchingGame): RecyclerView.Adapter<CardAdapter.ViewHolder>() {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val cardButton: Button
+
         init {
             cardButton = itemView.findViewById(R.id.button)
-
         }
-
     }
+
     var mListener:((Int)->Unit)?=null
     fun setOnClickListener(l:(Int)->Unit){
-        mListener = l
+        mListener=l
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
         return ViewHolder(view)
     }
 
@@ -31,17 +31,16 @@ class CardAdapter(val game: CardMatchingGame): RecyclerView.Adapter<CardAdapter.
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-        val card =game.cardAtIndex(position)
-        holder.cardButton.isEnabled=!card.isMatched
-        if (card.isChosen){
+        val card = game.cardAtIndex(position)
+        holder.cardButton.isEnabled = !card.isMatched
+        if (card.isChosen) {
             holder.cardButton.text = card.toString()
             holder.cardButton.setBackgroundColor(Color.WHITE)
-        }else{
-            holder.cardButton.text=""
+        } else {
+            holder.cardButton.text = ""
             holder.cardButton.setBackgroundResource(R.drawable.king)
         }
-        holder.cardButton.setOnClickListener {
+        holder.cardButton.setOnClickListener{
             mListener?.invoke(position)
         }
     }

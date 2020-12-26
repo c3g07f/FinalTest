@@ -1,6 +1,8 @@
 package cn.edu.finaltest.ui.game.card
 
-class CardMatchingGame(val count: Int)  {
+import java.io.Serializable
+
+class CardMatchingGame(val count: Int):Serializable {
     var score = 0
         private set
 
@@ -16,10 +18,10 @@ class CardMatchingGame(val count: Int)  {
             }
         }
     }
-    fun reset(){
+    fun reset() {
         val deck = Deck()
-        score = 0
         cards.clear()
+        score = 0
         for (i in 1..count) {
             val card: Card? = deck.drawRandomCard()
             if (card != null) {

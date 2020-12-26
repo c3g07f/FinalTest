@@ -1,6 +1,8 @@
 package cn.edu.finaltest.ui.game.card
+import java.io.Serializable
 
-class Card(private var suit: String, private var rank: String, var isChosen:Boolean = false, var isMatched:Boolean = false)  {
+
+class Card(private var suit: String, private var rank: String, var isChosen:Boolean = false, var isMatched:Boolean = false): Serializable  {
     companion object {
         val rankStrings= arrayOf("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K")
         val validSuits = arrayOf("♥", "♦", "♠", "♣")
@@ -21,6 +23,5 @@ class Card(private var suit: String, private var rank: String, var isChosen:Bool
             }
         }
         return score
-
     }
 }

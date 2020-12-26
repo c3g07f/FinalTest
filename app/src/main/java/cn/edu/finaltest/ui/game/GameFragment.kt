@@ -59,7 +59,7 @@ class GameFragment : Fragment() {
 
             adapter.notifyDataSetChanged()
             score?.text = String.format("%s%d",getString(R.string.score),lgame.score)
-            score?.text = getString(R.string.score) + lgame.score
+            score?.text = getString(R.string.score) + ":"+lgame.score
 
             adapter.setOnClickListener {
                 lgame.chooseCardAtIndex(it)
@@ -67,7 +67,7 @@ class GameFragment : Fragment() {
 
                 adapter.notifyDataSetChanged()
                 score?.text = String.format("%s%d",getString(R.string.score),lgame.score)
-                score?.text = getString(R.string.score) + lgame.score
+                score?.text = getString(R.string.score) + ":"+lgame.score
             }
 
             reset.setOnClickListener {
@@ -76,7 +76,7 @@ class GameFragment : Fragment() {
 
                 adapter.notifyDataSetChanged()
                 score?.text = String.format("%s%d",getString(R.string.score),lgame.score)
-                score?.text = getString(R.string.score) + lgame.score
+                score?.text = getString(R.string.score) + ":"+lgame.score
             }
         })
     }
