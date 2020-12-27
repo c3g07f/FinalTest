@@ -1,6 +1,10 @@
 package cn.edu.finaltest
 
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -25,4 +29,9 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+}
+class MyReceiver: BroadcastReceiver() {
+    override fun onReceive(p0: Context?, p1: Intent?) {
+        Log.d("Receiver", "receive message")
+    }
 }

@@ -5,16 +5,18 @@
     <string name="title_weather">Weather</string>
     <string name="title_watch">Watch</string>
     <string name="title_game">Game</string>
-    <string name="prev">PREV</string>
+
     <string name="time">00:00:00</string>
     <string name="start">start</string>
     <string name="watch_stop">stop</string>
     <string name="restart">restart</string>
-    <string name="play">PLAY</string>
+
     <string name="button4">确定</string>
-    <string name="pause">PAUSE</string>
-    <string name="stop">STOP</string>
-    <string name="next">NEXT</string>
+    <string name="play">播放</string>
+    <string name="prev">上一首</string>
+    <string name="next">下一首</string>
+    <string name="pause">暂停</string>
+    <string name="notification">通知</string>
     <string name="reset">Reset</string>
     <string name="score">Score</string>
     <string name="a">A*</string>
@@ -24,6 +26,9 @@
     <string name="textview2">TextView</string>
     <string name="textview3">TextView</string>
     <string name="me"></string>
+    <string name="musicname">音乐名</string>
+    <string name="to">播放至</string>
+    <string name="restore">继续</string>
     <string name="addTextView">Welcome!</string>
     <string-array name="list">
         <item>你好</item>
